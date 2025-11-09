@@ -352,5 +352,153 @@ Dataset with 4 features (height, weight, age, income) → PCA reduces it to 2 co
 ✅ **End of Unit 2 Answer Key** — All answers are structured for **7 marks**, include examples, and are written in **simple, easy-to-understand language**.
 
 
+# 🧠 Machine Learning Assignment — Unit 3 Answer Key (7-Mark Detailed Answers)
+
+This section provides **Unit 3 answers** written in simple, easy-to-understand language with detailed explanations and real-world examples. Each answer is designed for **7 marks**.
+
+---
+
+## 🔹 Q25. Explain how neural networks can be used as discriminative models. Describe the key differences between discriminative models and generative models.
+
+**Answer:**
+
+* **Neural Networks as Discriminative Models:**
+
+  * Neural networks learn to **classify** input data by modeling the boundary between classes.
+  * They estimate **P(y | x)** — the probability of class *y* given input *x*.
+  * Used in classification problems like image or speech recognition.
+
+📘 **Example:**
+A neural network can classify images of cats vs dogs by learning from labeled training data.
+
+### **Discriminative vs Generative Models:**
+
+| Feature        | Discriminative                          | Generative                  |                |    |
+| -------------- | --------------------------------------- | --------------------------- | -------------- | -- |
+| **Definition** | Learn decision boundary between classes | Model how data is generated |                |    |
+| **Output**     | P(y                                     | x)                          | P(x, y) or P(x | y) |
+| **Examples**   | Logistic Regression, Neural Networks    | Naïve Bayes, GANs           |                |    |
+| **Goal**       | Classify data                           | Generate new data samples   |                |    |
+
+✅ **Conclusion:** Neural networks are strong discriminative models — excellent for recognizing patterns, but they don’t generate data like generative models do.
+
+---
+
+## 🔹 Q26. Apply MLE to estimate the parameters of a Gaussian distribution.
+
+**Answer:**
+
+* **MLE (Maximum Likelihood Estimation):** It finds parameter values that make the observed data most likely.
+* For Gaussian distribution, parameters = Mean (μ) and Variance (σ²).
+
+### **Steps:**
+
+1. **Write Likelihood Function:**
+   L(μ, σ²) = Π [1 / (√(2πσ²))] * exp[-(xi - μ)² / (2σ²)]
+2. **Take Log:** Simplifies multiplication into addition.
+3. **Differentiate:** Set derivative = 0 to find μ and σ².
+4. **Result:**
+
+   * Mean (μ̂) = Σxi / n
+   * Variance (σ̂²) = Σ(xi - μ̂)² / n
+
+📘 **Example:**
+If exam scores are {70, 75, 80}, MLE estimates:
+μ̂ = 75, σ̂² = 16.67.
+
+✅ **Conclusion:** MLE helps estimate parameters that best describe data, ensuring the model fits real-world observations.
+
+---
+
+## 🔹 Q27. Explain how multinomial models are used in text classification. Describe the relationship between generalized linear models and linear regression.
+
+**Answer:**
+
+* **Multinomial Model in Text Classification:**
+
+  * It predicts the probability of a document belonging to multiple classes.
+  * Often used in **Naïve Bayes classifiers** for tasks like spam detection.
+  * Considers frequency of words (features) in documents.
+
+📘 **Example:**
+If words like “free” and “offer” appear often, the model predicts “Spam = Yes.”
+
+* **Relationship between GLM and Linear Regression:**
+
+  * **Linear Regression:** Models continuous outputs using straight-line relationships.
+  * **Generalized Linear Models (GLMs):** Extend linear regression to handle non-normal distributions and link functions (e.g., logistic, Poisson).
+
+✅ **Conclusion:** Multinomial models handle categorical outcomes efficiently, while GLMs generalize regression for various data types.
+
+---
+
+## 🔹 Q28. Evaluate the impact of prior selection in Bayesian learning.
+
+**Answer:**
+
+* **Bayesian Learning:** Updates prior beliefs with new data using Bayes’ Theorem.
+
+  * Formula: Posterior = (Likelihood × Prior) / Evidence
+
+### **Impact of Prior Selection:**
+
+1. **Informative Prior:** Reflects strong prior knowledge → influences posterior strongly.
+2. **Non-Informative Prior:** Minimal prior knowledge → data dominates the result.
+3. **Wrong Prior:** Can mislead results if it contradicts actual data.
+4. **More Data = Less Prior Effect:** As data increases, posterior depends more on new evidence.
+
+📘 **Example:**
+If you believe a student is 90% likely to pass before seeing marks (strong prior), that belief affects the final probability even after viewing data.
+
+✅ **Conclusion:** Choosing the right prior is crucial; it balances expert belief with observed data for accurate Bayesian predictions.
+
+---
+
+## 🔹 Q29. Compare logistic regression and support vector machines (SVM) as discriminative classifiers.
+
+**Answer:**
+
+| Feature              | Logistic Regression              | Support Vector Machine (SVM)                   |
+| -------------------- | -------------------------------- | ---------------------------------------------- |
+| **Type**             | Probabilistic model              | Geometric model                                |
+| **Output**           | Probability (0–1)                | Decision boundary (margin)                     |
+| **Objective**        | Maximize likelihood              | Maximize margin between classes                |
+| **Kernel Support**   | Limited                          | Supports linear & nonlinear (kernel) functions |
+| **Interpretability** | Easy                             | Complex                                        |
+| **Use Case**         | Medical or financial predictions | Image or text classification                   |
+
+📘 **Example:**
+
+* Logistic Regression → Predict whether a student passes (Yes/No).
+* SVM → Separate handwritten digits using boundary lines.
+
+✅ **Conclusion:** Logistic Regression is simpler and interpretable; SVM is powerful for high-dimensional and nonlinear data.
+
+---
+
+## 🔹 Q30. Evaluate the effectiveness of generative models in unsupervised learning tasks.
+
+**Answer:**
+
+* **Generative Models:** Learn how data is generated by estimating **P(x)** — the probability of input features.
+* Used in unsupervised learning where labels are not available.
+
+### **Effectiveness:**
+
+1. **Data Generation:** Can create new realistic samples (e.g., GANs generating faces).
+2. **Feature Learning:** Capture hidden patterns or structures in data.
+3. **Missing Data Handling:** Estimate missing values from learned distributions.
+4. **Denoising:** Improve data quality (e.g., in images or audio).
+
+📘 **Example:**
+
+* **GANs:** Generate realistic human faces.
+* **VAEs:** Learn compressed representations for image reconstruction.
+
+✅ **Conclusion:** Generative models are powerful for unsupervised tasks like image synthesis, clustering, and data augmentation, but require large data and computational resources.
+
+---
+
+✅ **End of Unit 3 Answer Key** — All answers are in 7-mark detailed format with examples, definitions, and comparisons for clarity.
 
 ✅ **End of Unit 1 (7-Mark Detailed Answer Key)**
