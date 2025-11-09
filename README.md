@@ -502,3 +502,142 @@ If you believe a student is 90% likely to pass before seeing marks (strong prior
 ✅ **End of Unit 3 Answer Key** — All answers are in 7-mark detailed format with examples, definitions, and comparisons for clarity.
 
 ✅ **End of Unit 1 (7-Mark Detailed Answer Key)**
+
+
+# 🌍 Machine Learning Assignment — Unit 4 Answer Key (7-Mark Detailed Answers)
+
+This section provides **Unit 4 answers** in simple, clear, and detailed 7-mark format with real-life examples and structured explanations.
+
+---
+
+## 🔹 Q37. Explain the importance of domain knowledge in machine learning model development.
+
+**Answer:**
+
+* **Domain Knowledge** means understanding the specific field where ML is applied (e.g., healthcare, finance, education).
+* It helps interpret data correctly and make meaningful models.
+
+### **Importance:**
+
+1. **Feature Selection:** Identify which features are truly important.
+2. **Data Cleaning:** Detect and remove irrelevant or biased data.
+3. **Model Interpretation:** Understand why predictions make sense in context.
+4. **Improved Accuracy:** Domain-based insights improve model reliability.
+5. **Avoiding Errors:** Prevents logical mistakes (e.g., using wrong metrics).
+
+📘 **Example:**
+In healthcare, domain experts can help choose vital features like age, blood pressure, and glucose level for disease prediction.
+
+✅ **Conclusion:** Domain knowledge bridges the gap between raw data and real-world understanding, leading to better, trustworthy ML models.
+
+---
+
+## 🔹 Q38. Explain the use of supervised learning in medical image analysis.
+
+**Answer:**
+
+* **Supervised Learning:** Model learns from labeled data (input + correct output).
+* In **medical image analysis**, it’s used for detecting diseases, classifying tissues, and analyzing scans.
+
+### **Applications:**
+
+1. **Tumor Detection:** CNNs classify MRI images as normal or tumor.
+2. **Organ Segmentation:** Models identify organ boundaries in X-rays.
+3. **Disease Prediction:** Models detect diseases like pneumonia from chest images.
+4. **Retinal Scan Analysis:** Detects diabetic retinopathy using labeled images.
+
+📘 **Example:**
+A CNN trained on 10,000 chest X-rays learns to detect lung infections with high accuracy.
+
+✅ **Conclusion:** Supervised learning improves medical accuracy, supports doctors, and speeds up diagnosis.
+
+---
+
+## 🔹 Q39. Explain the role of data anonymization in preserving privacy.
+
+**Answer:**
+
+* **Data Anonymization:** Process of protecting personal information by removing identifiers (like names, addresses, phone numbers).
+
+### **Role in Privacy:**
+
+1. **Protects Identity:** Ensures individuals cannot be identified.
+2. **Enables Safe Data Sharing:** Organizations can use data for research without exposing personal info.
+3. **Compliance:** Helps follow privacy laws (like GDPR).
+4. **Prevents Misuse:** Reduces risk of data theft or discrimination.
+
+📘 **Example:**
+In a hospital dataset, replacing patient names with random IDs maintains privacy while allowing analysis.
+
+✅ **Conclusion:** Anonymization keeps data useful for ML while ensuring ethical and legal privacy protection.
+
+---
+
+## 🔹 Q40. Define ethics in the context of machine learning. Why is it important?
+
+**Answer:**
+
+* **Ethics in ML:** Means designing and using AI systems that are fair, transparent, and respect human rights.
+
+### **Importance:**
+
+1. **Fairness:** Avoids bias against race, gender, or community.
+2. **Transparency:** Users should know how models make decisions.
+3. **Accountability:** Developers must take responsibility for model outcomes.
+4. **Privacy Protection:** Ensures personal data isn’t misused.
+5. **Trust Building:** Ethical systems gain public confidence.
+
+📘 **Example:**
+An unethical hiring algorithm might reject candidates from certain backgrounds — highlighting the need for fairness checks.
+
+✅ **Conclusion:** Ethical ML ensures responsible, unbiased, and transparent use of technology in society.
+
+---
+
+## 🔹 Q41. How does domain expertise influence feature selection and model accuracy? Illustrate with examples.
+
+**Answer:**
+
+* **Domain Expertise:** Knowledge of the application area that helps in understanding data meaningfully.
+
+### **Influence on Feature Selection:**
+
+1. **Choosing Relevant Variables:** Experts identify which features impact results.
+2. **Avoiding Irrelevant Data:** Reduces noise and simplifies model.
+3. **Custom Feature Engineering:** Create domain-specific features for better learning.
+
+### **Impact on Accuracy:**
+
+* Better features = Better predictions.
+* Reduces overfitting and improves interpretability.
+
+📘 **Example:**
+In finance, a domain expert knows that “income-to-debt ratio” affects loan approval more than “number of bank accounts.”
+
+✅ **Conclusion:** Domain expertise refines feature selection, improving both performance and understanding of ML models.
+
+---
+
+## 🔹 Q42. How does predictive analytics help in credit risk assessment?
+
+**Answer:**
+
+* **Predictive Analytics:** Uses historical data and ML algorithms to predict future events.
+
+### **Role in Credit Risk:**
+
+1. **Default Prediction:** Predicts if a customer will repay a loan or not.
+2. **Risk Scoring:** Assigns risk scores based on financial behavior.
+3. **Customer Segmentation:** Groups customers by risk level.
+4. **Fraud Detection:** Identifies unusual or suspicious transactions.
+5. **Decision Automation:** Helps banks make faster, data-driven decisions.
+
+📘 **Example:**
+A bank uses ML to analyze past loan records. It predicts that customers with irregular payments and low income are high-risk borrowers.
+
+✅ **Conclusion:** Predictive analytics improves financial safety and efficiency by allowing better risk prediction and management.
+
+---
+
+✅ **End of Unit 4 Answer Key** — All answers are written in detailed 7-mark format, using simple language, clear points, and real-world examples for easy understanding.
+
