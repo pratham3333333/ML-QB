@@ -1,0 +1,133 @@
+# Machine Learning — Unit 1 (6-mark answers in Simple Terms)
+
+This README has short and simple 6-mark answers to Questions 1–7, with easy Mermaid flowcharts.
+
+---
+
+## Q1. Define machine learning. List the differences between classification and regression. What is the bias–variance trade-off?
+
+**Machine Learning (ML)** means teaching computers to learn from examples and make decisions without being told every step.
+
+**Classification vs Regression:**
+
+* **Classification:** Output is a category (like spam or not spam).
+* **Regression:** Output is a number (like predicting house price).
+* **Loss functions:** Classification checks how correct the class is, regression checks how close the number is.
+* **Evaluation:** Classification uses accuracy or F1 score; regression uses error like mean difference.
+* **Example:** Email filter (classification), predicting temperature (regression).
+
+**Bias–Variance trade-off:**
+
+* **Bias:** Error when model is too simple and misses important patterns (underfitting).
+* **Variance:** Error when model learns noise and fits training data too closely (overfitting).
+* **Trade-off:** We need balance — not too simple, not too complex.
+
+---
+
+## Q2. Apply the concepts of reinforcement learning to a simple game environment. Demonstrate the use of causal inference in a healthcare prediction scenario.
+
+### Reinforcement Learning in a Simple Game
+
+* **Example:** A robot learns to reach a goal in a maze.
+* It gets **rewards** for good moves and **penalties** for bad moves.
+* It keeps trying different moves and slowly learns which actions give the most reward.
+* After many tries, it learns the best way to reach the goal.
+
+**Flowchart:**
+
+```mermaid
+flowchart LR
+  A[Agent] --> B[Choose action]
+  B --> C[Environment changes]
+  C --> D[Get reward or penalty]
+  D --> E[Update learning]
+  E --> A
+```
+
+### Causal Inference in Healthcare
+
+* Doctors want to know if a new medicine **actually causes** faster recovery, not just a random link.
+* They check two groups: one takes the medicine, one does not.
+* They make sure other factors like age or health are similar.
+* Then they compare recovery rates to see if the medicine truly helps.
+
+**Flowchart:**
+
+```mermaid
+flowchart TD
+  A[Collect patient data] --> B[Check age, health, etc.]
+  B --> C[Divide into treated and untreated]
+  C --> D[Compare recovery results]
+  D --> E[Find true effect of treatment]
+```
+
+---
+
+## Q3. Analyse the role of expectation in deriving the mean and variance of a probability distribution.
+
+* **Expectation (mean):** It tells the average or central value of all possible outcomes.
+* **Variance:** It tells how much the values differ from the average.
+* **Example:** If exam scores are 60, 70, 80 — the average is 70 (expectation). Variance shows how far each score is from 70.
+* **Role in ML:** Used to measure how predictions differ from true values and how much uncertainty exists in data.
+
+---
+
+## Q4. Evaluate the significance of information theory in feature selection for machine learning.
+
+* Information theory helps find which features (inputs) are **most useful** for prediction.
+* **Mutual Information (MI):** Checks how much knowing one feature helps to know the target.
+* The higher the information gain, the better the feature.
+* **Example:** For predicting weather — humidity gives more useful info than wind direction.
+* Helps models become faster and more accurate by removing useless data.
+
+---
+
+## Q5. Apply the concept of simple models versus complex models to a given dataset. Explain which model is more suitable.
+
+* **Simple models:** Easy to understand, quick to train, but may miss details (like straight-line models).
+* **Complex models:** Can learn tricky patterns but may overfit if data is small.
+* **Choose based on data:**
+
+  * If data is small → simple model works better.
+  * If data is large and rich → complex model works better.
+* **Example:** Predicting house prices with 100 samples → simple linear model. With 50,000 samples and many features → deep learning.
+
+---
+
+## Q6. What is reinforcement learning? Define causal inference in machine learning.
+
+**Reinforcement Learning:** The model learns by doing actions and getting feedback. It gets rewards for good actions and learns from mistakes. Example — game AI or robot navigation.
+
+**Causal Inference:** It finds cause-and-effect relationships, not just patterns. Example — checking if exercise actually causes better health, not just that both are related.
+
+**Flowchart:**
+
+```mermaid
+flowchart LR
+  A[Reinforcement Learning] --> B[Learn by feedback]
+  C[Causal Inference] --> D[Find cause and effect]
+  B --- D
+```
+
+---
+
+## Q7. Apply the concepts of reinforcement learning to a simple game environment. Describe the agent’s learning process.
+
+* The agent starts with no knowledge of the game.
+* It tries different moves and gets rewards or penalties.
+* Over time, it learns which actions lead to success.
+* The more it plays, the better its decisions become.
+* Eventually, it finds the best strategy to win the game.
+
+**Flowchart:**
+
+```mermaid
+flowchart TD
+  Start[Start game] --> Observe[See current state]
+  Observe --> Choose[Pick an action]
+  Choose --> Act[Perform action → get reward]
+  Act --> Update[Learn from reward]
+  Update --> Terminal{Game finished?}
+  Terminal -- No --> Observe
+  Terminal -- Yes --> End[Finish and restart]
+```
