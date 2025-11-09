@@ -126,4 +126,203 @@ flowchart TD
   Terminal -- No --> Observe
   Terminal -- Yes --> End[Finish and restart]
 ```
+# Machine Learning — Unit 2 (6-mark answers in Simple Terms)
+
+This README gives short, simple 6-mark answers for Questions 13–20 with flowcharts for better understanding.
+
+---
+
+## Q13. Design a classification model using decision trees for predicting customer churn in a telecommunications dataset. Explain your approach.
+
+**Idea:** Customer churn means customers who stop using a service. The goal is to predict which customers might leave.
+
+**Steps:**
+
+1. Collect customer data — age, plan type, usage, complaints, etc.
+2. Clean data and label churners (Yes/No).
+3. Use a **Decision Tree Classifier** to split data based on conditions (like “calls < 30?” or “payment delays > 3?”).
+4. Tree learns rules that best separate churners from non-churners.
+5. Test on new data to check accuracy.
+6. Use results to plan retention actions for high-risk customers.
+
+**Flowchart:**
+
+```mermaid
+flowchart TD
+  A[Customer Data] --> B[Preprocess & Label]
+  B --> C[Train Decision Tree]
+  C --> D[Predict Churn]
+  D --> E[Check Accuracy & Take Actions]
+```
+
+---
+
+## Q14. Define feature extraction in machine learning. List common methods of linear dimension reduction.
+
+**Feature Extraction:** It means converting raw data into useful features that represent important patterns for a model.
+
+**Linear Dimension Reduction Methods:**
+
+1. **Principal Component Analysis (PCA):** Finds new directions (components) that keep most of the data’s variation.
+2. **Linear Discriminant Analysis (LDA):** Separates classes while reducing dimensions.
+3. **Factor Analysis:** Identifies hidden factors that explain patterns in data.
+
+**Example:** Turning 100 image pixels into 10 meaningful features that still represent the picture.
+
+**Flowchart:**
+
+```mermaid
+flowchart LR
+  A[Raw Data] --> B[Extract Key Features]
+  B --> C[Reduced Feature Set]
+  C --> D[Train ML Model]
+```
+
+---
+
+## Q15. Explain the concept of neural networks in nonlinear dimension reduction. Describe the significance of eigenvalues in PCA.
+
+**Neural Networks for Nonlinear Reduction:**
+
+* Neural networks (like **autoencoders**) can find complex patterns and reduce data dimensions that are not in straight-line relationships.
+* Autoencoders compress data into a smaller “code” and then try to rebuild it.
+
+**Eigenvalues in PCA:**
+
+* Each eigenvalue shows how much information or variance a principal component holds.
+* Larger eigenvalues = more important features.
+* By keeping the biggest eigenvalues, PCA keeps the most meaningful data.
+
+**Flowchart:**
+
+```mermaid
+flowchart LR
+  A[Input Data] --> B[Encoder Network (Compress)]
+  B --> C[Code (Low Dimension)]
+  C --> D[Decoder (Reconstruct)]
+  D --> E[Output Data]
+```
+
+---
+
+## Q16. Compare linear and nonlinear dimension reduction techniques in feature extraction.
+
+| Aspect       | Linear Methods                     | Nonlinear Methods                      |
+| ------------ | ---------------------------------- | -------------------------------------- |
+| Relationship | Assume straight-line relationships | Capture curves and complex relations   |
+| Examples     | PCA, LDA                           | t-SNE, Autoencoders                    |
+| Speed        | Fast and simple                    | Slower and more complex                |
+| Data type    | Works on simple data               | Works on high-dimensional complex data |
+| Output       | Easy to interpret                  | Harder to interpret but powerful       |
+
+**Example:**
+
+* **Linear:** PCA for structured numeric data.
+* **Nonlinear:** Autoencoder for images or speech.
+
+---
+
+## Q17. Explain how decision-based methods are applied in classification. Describe the key differences between instance-based learning and decision-based methods.
+
+**Decision-based Methods:**
+
+* Use rules or boundaries to decide the class of data points.
+* Example: **Decision Tree, Random Forest.**
+* The model learns “if–else” rules to separate classes.
+
+**Instance-based Learning:**
+
+* Does not make rules. It compares new examples to stored ones.
+* Example: **K-Nearest Neighbour (KNN).**
+
+**Key Differences:**
+
+| Feature       | Decision-based       | Instance-based              |
+| ------------- | -------------------- | --------------------------- |
+| Rule Creation | Learns general rules | No rules; compares examples |
+| Memory Use    | Less                 | More                        |
+| Speed         | Fast at prediction   | Slower                      |
+| Example       | Decision Tree        | KNN                         |
+
+**Flowchart:**
+
+```mermaid
+flowchart LR
+  A[Training Data] --> B[Decision-based: Learn Rules]
+  A --> C[Instance-based: Store Examples]
+  B --> D[Predict using Rules]
+  C --> D
+```
+
+---
+
+## Q18. Apply PCA on a dataset to reduce its dimensionality. Show the steps involved.
+
+**PCA (Principal Component Analysis)** reduces data size while keeping important information.
+
+**Steps:**
+
+1. Collect and clean the dataset.
+2. Standardize values (bring them to same scale).
+3. Find directions with most variation (principal components).
+4. Keep only top components that explain most data.
+5. Use these components as new, smaller features for the model.
+
+**Flowchart:**
+
+```mermaid
+flowchart TD
+  A[Original Data] --> B[Standardize Values]
+  B --> C[Find Principal Components]
+  C --> D[Select Top Components]
+  D --> E[Reduced Dataset]
+```
+
+---
+
+## Q19. Analyze the role of neural networks in extracting features from images.
+
+* Neural networks, especially **Convolutional Neural Networks (CNNs)**, automatically detect important features like edges, colors, and shapes.
+* Early layers detect simple patterns (lines), deeper layers detect complex ones (faces, objects).
+* This removes the need for manual feature design.
+* The network learns directly from image pixels.
+
+**Example:** A CNN learns to identify a cat by detecting eyes, ears, and whiskers automatically.
+
+**Flowchart:**
+
+```mermaid
+flowchart LR
+  A[Input Image] --> B[Convolution Layers → Detect Edges]
+  B --> C[Deeper Layers → Learn Patterns]
+  C --> D[Output Class → Cat/Dog]
+```
+
+---
+
+## Q20. Create a feature extraction method using Convolutional Neural Networks (CNN) for object recognition.
+
+**Steps:**
+
+1. **Input Images:** Feed raw images into CNN.
+2. **Convolution Layers:** Detect local features like edges or corners.
+3. **Pooling Layers:** Reduce image size but keep key details.
+4. **Flatten Layer:** Convert 2D data to 1D vector.
+5. **Fully Connected Layer:** Combine features for final decision.
+6. **Output Layer:** Predict object class (like car, dog, or tree).
+
+**Flowchart:**
+
+```mermaid
+flowchart LR
+  A[Input Image] --> B[Convolution Layer]
+  B --> C[Pooling Layer]
+  C --> D[Flatten Layer]
+  D --> E[Fully Connected Layer]
+  E --> F[Output Class]
+```
+
+---
+
+
 
