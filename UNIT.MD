@@ -1,8 +1,3 @@
-# Machine Learning — Unit 1 (6-mark answers in Simple Terms)
-
-This README has short and simple 6-mark answers to Questions 1–7, with easy Mermaid flowcharts.
-
----
 
 ## Q1. Define machine learning. List the differences between classification and regression. What is the bias–variance trade-off?
 
@@ -131,3 +126,4 @@ flowchart TD
   Terminal -- No --> Observe
   Terminal -- Yes --> End[Finish and restart]
 ```
+
