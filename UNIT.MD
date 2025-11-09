@@ -322,7 +322,209 @@ flowchart LR
   E --> F[Output Class]
 ```
 
+
+# 🧩 Machine Learning Assignment — Unit 3 Detailed Answers (Simple 6-Mark Format)
+
 ---
+
+## 🔹 Q25. Explain how neural networks can be used as discriminative models. Describe the key differences between discriminative models and generative models.
+
+**Answer:**
+Neural networks act as **discriminative models** because they learn to **separate data into classes** based on patterns.
+
+* **Discriminative models** focus on learning the **decision boundary** between different outputs (e.g., cat vs dog).
+* **Generative models** try to **learn how the data is created** — they model the actual distribution of inputs.
+
+**Example:**
+A neural network classifies whether an email is spam or not. It only focuses on separating the two labels — not generating new emails.
+
+**Mermaid Flowchart:**
+
+```mermaid
+flowchart LR
+A[Input Data] --> B[Neural Network]
+B --> C[Extract Features]
+C --> D[Discriminative Decision]
+D --> E[Output Class (Spam/Not Spam)]
+```
+
+---
+
+## 🔹 Q26. Apply MLE to estimate the parameters of a Gaussian distribution.
+
+**Answer:**
+Maximum Likelihood Estimation (MLE) is used to **find the best values** for parameters that make the data most probable.
+
+**Steps (Simple Terms):**
+
+1. Assume the data follows a certain pattern (e.g., bell-shaped curve).
+2. Try different parameter values (like mean and spread).
+3. Choose the ones that best fit the observed data.
+
+**Example:**
+In a classroom, MLE can estimate the average height of students by finding the mean that best fits the recorded heights.
+
+**Mermaid Flowchart:**
+
+```mermaid
+flowchart TD
+A[Data Samples] --> B[Assume Model Type]
+B --> C[Test Parameter Values]
+C --> D[Select Parameters that Maximize Fit]
+D --> E[Estimated Parameters]
+```
+
+---
+
+## 🔹 Q27. Explain how multinomial models are used in text classification. Describe the relationship between generalized linear models and linear regression.
+
+**Answer:**
+Multinomial models are used when an output can belong to **multiple categories** — such as classifying news into topics like *sports*, *tech*, or *politics*.
+
+* **In text classification**, multinomial models use **word counts** to decide which category a text belongs to.
+* **Generalized Linear Models (GLM)** extend linear regression by allowing **different types of output distributions**, not just continuous values.
+
+**Example:**
+Email classifier counting how many times words like “offer” or “free” appear to decide if it’s spam.
+
+**Mermaid Flowchart:**
+
+```mermaid
+flowchart LR
+A[Input Text] --> B[Word Count Features]
+B --> C[Multinomial Model]
+C --> D[Calculate Probabilities]
+D --> E[Output Category]
+```
+
+---
+
+## 🔹 Q28. Evaluate the impact of prior selection in Bayesian learning.
+
+**Answer:**
+In Bayesian learning, a **prior** represents what we already believe before seeing new data. Choosing the right prior affects the **final prediction**.
+
+* A **strong prior** can dominate the result when data is limited.
+* A **neutral prior** lets the data speak more freely.
+
+**Example:**
+If a doctor believes 80% of flu cases have fever (prior belief), even small data without fever might not change their prediction much.
+
+**Mermaid Flowchart:**
+
+```mermaid
+flowchart LR
+A[Prior Belief] --> B[New Evidence]
+B --> C[Combine via Bayes Rule]
+C --> D[Updated Belief (Posterior)]
+```
+
+---
+
+## 🔹 Q29. Compare logistic regression and support vector machines (SVM) as discriminative classifiers.
+
+**Answer:**
+Both are **classification algorithms**, but they work differently.
+
+| Feature                 | Logistic Regression             | Support Vector Machine (SVM) |
+| ----------------------- | ------------------------------- | ---------------------------- |
+| Goal                    | Estimate probability of a class | Find maximum margin boundary |
+| Output                  | Probabilities                   | Class labels                 |
+| Handling Nonlinear Data | Needs transformation            | Can use kernels              |
+| Use Case                | Simple, fast models             | Complex, flexible problems   |
+
+**Example:**
+Predicting if a student will pass (yes/no): logistic regression for simple datasets, SVM for more complex ones.
+
+---
+
+## 🔹 Q30. Evaluate the effectiveness of generative models in unsupervised learning tasks.
+
+**Answer:**
+Generative models are **powerful for unsupervised learning** because they learn **patterns without labeled data**.
+
+* They can **create new samples** that look like the training data.
+* Useful for **image generation, speech synthesis, and data augmentation**.
+
+**Example:**
+A model trained on animal photos can generate new animal-like images without knowing their names.
+
+**Mermaid Flowchart:**
+
+```mermaid
+flowchart TD
+A[Unlabeled Data] --> B[Train Generative Model]
+B --> C[Learn Data Patterns]
+C --> D[Generate New Similar Data]
+```
+
+---
+
+## 🔹 Q31. Analyse the benefits and drawbacks of generative models compared to discriminative models.
+
+**Answer:**
+**Benefits of Generative Models:**
+
+* Can generate new data.
+* Work with unlabeled data.
+* Useful for anomaly detection and simulation.
+
+**Drawbacks:**
+
+* More complex to train.
+* Sometimes less accurate for classification.
+
+**Discriminative Models:**
+
+* Easier and faster to train.
+* Better for prediction tasks.
+
+**Example:**
+Generative models like GANs create art, while discriminative models identify if it’s a cat or a dog.
+
+**Mermaid Flowchart:**
+
+```mermaid
+flowchart LR
+A[Data] --> B[Generative Model]
+A --> C[Discriminative Model]
+B --> D[New Data Creation]
+C --> E[Classification]
+```
+
+---
+
+## 🔹 Q32. Apply Bayesian inference to update the posterior given a likelihood and a prior.
+
+**Answer:**
+Bayesian inference combines what we **believe (prior)** with **new evidence (likelihood)** to form an **updated belief (posterior)**.
+
+**Steps:**
+
+1. Start with prior belief.
+2. Observe new data (likelihood).
+3. Combine both to get the updated result.
+
+**Example:**
+A weather app predicts rain with 60% chance (prior). After seeing dark clouds (evidence), the new belief (posterior) becomes higher.
+
+**Mermaid Flowchart:**
+
+```mermaid
+flowchart TD
+A[Prior Belief] --> B[Observe New Data]
+B --> C[Compute Likelihood]
+C --> D[Combine to Get Posterior]
+D --> E[Updated Prediction]
+```
+
+---
+
+✨ *These answers explain key Unit 3 concepts simply — without formulas, with examples and visual clarity through flowcharts.*
+
+
+---
+
 
 
 
