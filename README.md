@@ -210,6 +210,147 @@ A process to determine **cause-and-effect** relationships rather than mere assoc
 
 Together, RL and causal inference enhance **learning, reasoning, and fairness**, enabling ML systems to make smarter, cause-based decisions.
 
+# 🤖 Machine Learning Assignment — Unit 2 Answer Key (7-Mark Detailed Answers)
+
+This file contains **detailed 7-mark answers** for Unit 2 of the Machine Learning assignment. Each answer includes clear explanations, structured points, and real-world examples.
+
 ---
+
+## 🔹 Q13. Design a classification model using decision trees for predicting customer churn in a telecommunications dataset. Explain your approach.
+
+**Answer:**
+
+* **Definition:** A Decision Tree is a supervised learning algorithm used for classification and regression. It splits data into branches based on conditions.
+* **Goal:** Predict if a customer will leave (churn) or stay.
+
+### **Steps:**
+
+1. **Data Collection:** Use customer data like age, usage, plan type, complaints, etc.
+2. **Data Preprocessing:** Handle missing values and convert categorical data (e.g., gender → numeric).
+3. **Feature Selection:** Choose features like call duration, bill amount, and contract type.
+4. **Model Building:** Use the Decision Tree algorithm (e.g., ID3, C4.5, or CART).
+5. **Training:** The tree splits based on **information gain** or **Gini index**.
+6. **Prediction:** For a new customer, the model predicts churn based on conditions.
+
+📘 **Example:**
+If a user has a short contract, low call usage, and high complaints → model predicts **“Churn = Yes.”**
+
+✅ **Conclusion:** Decision Trees are interpretable and effective for customer churn prediction but may overfit if the tree is too deep.
+
+---
+
+## 🔹 Q14. Define feature extraction in machine learning. List common methods of linear dimension reduction.
+
+**Answer:**
+
+* **Feature Extraction:** It’s the process of transforming raw data into meaningful features that improve model performance.
+* It helps reduce **dimensionality**, remove redundancy, and increase **efficiency**.
+
+### **Linear Dimension Reduction Methods:**
+
+1. **Principal Component Analysis (PCA):** Converts correlated variables into uncorrelated principal components.
+2. **Linear Discriminant Analysis (LDA):** Maximizes separation between multiple classes.
+3. **Singular Value Decomposition (SVD):** Decomposes data matrix into smaller components.
+
+📘 **Example:**
+In an image dataset with 1000 features (pixels), PCA can reduce it to 100 main components without losing major information.
+
+✅ **Conclusion:** Linear methods help simplify data while maintaining its structure, improving model speed and accuracy.
+
+---
+
+## 🔹 Q15. Explain the concept of neural networks in nonlinear dimension reduction. Describe the significance of eigenvalues in PCA.
+
+**Answer:**
+
+* **Neural Networks for Nonlinear Reduction:**
+
+  * Neural networks (like **Autoencoders**) can learn complex, nonlinear mappings of data.
+  * They compress input data into a smaller hidden layer and reconstruct it — learning efficient feature representations.
+
+📘 **Example:** In face recognition, an autoencoder learns unique facial patterns (eyes, nose) in reduced dimensions.
+
+* **Eigenvalues in PCA:**
+
+  * Represent the **amount of variance** captured by each principal component.
+  * Larger eigenvalues → more important components.
+
+✅ **Conclusion:** Neural networks handle complex data patterns, while eigenvalues in PCA help select top features for accurate analysis.
+
+---
+
+## 🔹 Q16. Compare linear and nonlinear dimension reduction techniques in feature extraction.
+
+**Answer:**
+
+| Aspect               | Linear Techniques                  | Nonlinear Techniques                  |
+| -------------------- | ---------------------------------- | ------------------------------------- |
+| **Nature**           | Assume straight-line relationships | Capture complex, curved relationships |
+| **Examples**         | PCA, LDA                           | t-SNE, Autoencoders                   |
+| **Speed**            | Faster, simpler                    | Slower, computationally heavy         |
+| **Interpretability** | Easy to explain                    | Harder to interpret                   |
+| **Use Case**         | Tabular data                       | Image, speech, nonlinear data         |
+
+📘 **Example:**
+
+* PCA (linear) works for simple data like student marks.
+* t-SNE (nonlinear) works for visualizing image clusters.
+
+✅ **Conclusion:** Choice depends on data structure — linear for simple relations, nonlinear for complex patterns.
+
+---
+
+## 🔹 Q17. Explain how decision-based methods are applied in classification. Describe the key differences between instance-based learning and decision-based methods.
+
+**Answer:**
+
+* **Decision-Based Methods:**
+
+  * Use a set of rules or tree structures to make predictions.
+  * Learn decision boundaries from training data.
+  * Example algorithms: Decision Trees, Random Forests.
+
+📘 **Example:** In medical diagnosis, a Decision Tree can predict “Disease or No Disease” based on patient symptoms.
+
+### **Instance-Based Learning:**
+
+* Uses existing data points directly for predictions.
+* No explicit model; relies on similarity (e.g., K-Nearest Neighbours).
+
+### **Key Differences:**
+
+| Feature      | Decision-Based        | Instance-Based                  |
+| ------------ | --------------------- | ------------------------------- |
+| **Approach** | Learns explicit rules | Stores and compares data points |
+| **Speed**    | Faster at prediction  | Slower at prediction            |
+| **Examples** | Decision Tree, SVM    | KNN                             |
+
+✅ **Conclusion:** Decision-based models generalize patterns; instance-based models memorize and compare examples.
+
+---
+
+## 🔹 Q18. Apply PCA on a dataset to reduce its dimensionality. Show the steps involved.
+
+**Answer:**
+**Principal Component Analysis (PCA)** is used to reduce the number of features while keeping most of the information.
+
+### **Steps in PCA:**
+
+1. **Standardize the Data:** Mean = 0, Variance = 1.
+2. **Compute Covariance Matrix:** Shows relationships between variables.
+3. **Find Eigenvalues & Eigenvectors:** Identify principal components.
+4. **Select Top Components:** Choose components with highest eigenvalues.
+5. **Transform Data:** Multiply original data with selected eigenvectors.
+
+📘 **Example:**
+Dataset with 4 features (height, weight, age, income) → PCA reduces it to 2 components capturing 90% of variance.
+
+✅ **Conclusion:** PCA reduces complexity, helps visualization, and improves computational efficiency without losing major data insights.
+
+---
+
+✅ **End of Unit 2 Answer Key** — All answers are structured for **7 marks**, include examples, and are written in **simple, easy-to-understand language**.
+
+
 
 ✅ **End of Unit 1 (7-Mark Detailed Answer Key)**
